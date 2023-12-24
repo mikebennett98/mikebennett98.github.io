@@ -147,7 +147,7 @@ rgba(13, 173, 255, 1) 0DADFF
 		}
 
 		a:visited {
-			color: var(--colour-text);
+			color: var(--colour-link);
 		}
 
 		a:active {
@@ -2341,7 +2341,7 @@ rgba(13, 173, 255, 1) 0DADFF
 				}
 
 					ul.actions:not(.fixed) li > * {
-						width: 100%;
+						width: 50%;
 					}
 
 					ul.actions:not(.fixed) li:first-child {
@@ -2353,7 +2353,7 @@ rgba(13, 173, 255, 1) 0DADFF
 					ul.actions:not(.fixed) li input[type="button"],
 					ul.actions:not(.fixed) li button,
 					ul.actions:not(.fixed) li .button {
-						width: 100%;
+						width: 50%;
 					}
 
 						ul.actions:not(.fixed) li input[type="submit"].icon:before,
@@ -3315,7 +3315,7 @@ rgba(13, 173, 255, 1) 0DADFF
 
 			#main {
 				margin: 0;
-				padding: 3em 0;
+				padding: 3em 4em;
 				width: 100%;
 			}
 
@@ -3332,9 +3332,15 @@ rgba(13, 173, 255, 1) 0DADFF
 				
 			}
 
-			.imagegrid-item {
-				width: 25%;
+			.imagegrid{
+				width: 100vw;
+				margin-left: -4em;
+				margin-right: -4em;
 			}
+
+				.imagegrid-item {
+					width: 25%;
+				}
 
 			
 
@@ -3410,7 +3416,7 @@ rgba(13, 173, 255, 1) 0DADFF
 		/* Main */
 
 			#main {
-				padding: 2.25em 0 0.25em 0;
+				padding: 2.25em 1.5em 0.25em 1.5em; /* change .imagegrid margins if you change this 2.25em 1.5em 0.25em 1.5em; */
 			}
 
 				#main > section {
@@ -3422,6 +3428,12 @@ rgba(13, 173, 255, 1) 0DADFF
 				max-width: 70%;
 			}
 
+			.imagegrid{
+				width: 100vw;
+				margin-left: -1.5em;
+				margin-right: -1.5em;
+			}
+			
 			.imagegrid-item {
 				width: 33.33%;
 			}
@@ -3482,9 +3494,10 @@ rgba(13, 173, 255, 1) 0DADFF
 				100% {top: calc(100vw * -12);} /* 12 is the image's width to height ratio and final offset number needs to be negative*/
 			}
 
-		.button {
-			min-width: 30%;
-		}
+			.button {
+				min-width: 30%;
+			}
+			
 		/* Footer */
 
 			#footer .copyright li {
@@ -3496,10 +3509,16 @@ rgba(13, 173, 255, 1) 0DADFF
 			}
 
 		/* Main */
-			
+
 			#one {
 				max-width: 90%;
+
 			}
 
+			.width-full {
+				width: 100vw !important;
+				margin-left: -1.5em !important; /* margins dependent on #main */
+				margin-right: -1.5em !important;
+			}
 	
 	}
