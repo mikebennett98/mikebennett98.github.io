@@ -61,37 +61,6 @@
 
 	// Header.
 
-		// Parallax background.
-
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
-
-			if (settings.parallax) {
-
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
 
 	// Main Sections: Two.
 
@@ -127,12 +96,16 @@
 					image.src = image.dataset.src;
 					image.classList.remove("lazy");
 					imageObserver.unobserve(image);
+					image.style.transition = "opacity 0.5s ease-in-out"; // Add transition property
+                    image.style.opacity = 1; // Set opacity to 1 to trigger the transition
 				}
 				});
 			});
 		
 			lazyloadImages.forEach(function(image) {
 				imageObserver.observe(image);
+				// Set initial opacity to 0 for the lazy-loaded images
+				image.style.opacity = 0;
 			});
 			} else {  
 			var lazyloadThrottleTimeout;
@@ -144,11 +117,13 @@
 				}    
 		
 				lazyloadThrottleTimeout = setTimeout(function() {
-				var scrollTop = window.pageYOffset;
+				var scrollTop = window.scrollY;
 				lazyloadImages.forEach(function(img) {
 					if(img.offsetTop < (window.innerHeight + scrollTop)) {
 						img.src = img.dataset.src;
 						img.classList.remove('lazy');
+						img.style.transition = "opacity 0.5s ease-in-out"; // Add transition property
+                        img.style.opacity = 1; // Set opacity to 1 to trigger the transition
 					}
 				});
 				if(lazyloadImages.length == 0) { 
@@ -164,6 +139,63 @@
 			window.addEventListener("orientationChange", lazyload);
 			}
 		})
-	  
+
+
+
+		// scroll debouncing whenever any demo binds an event to a scroll event: you should consider debouncing when binding...
+		// functions to scroll events, because if you don’t, it’ll get called a zillion times and could be slow.
+		const debounce = (func, delay) => {
+			let timeoutId;
+			return function() {
+				const context = this;
+				const args = arguments;
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout(() => {
+					func.apply(context, args);
+				}, delay);
+			};
+		};
+
+		// Navbar fixed to top of screen when scrolling down.
+		const navbar = document.getElementById("navbar-wrapper");
+		const placeholder = document.getElementById("navbar-placeholder");
+		const offset = navbar.offsetTop; // Get the offset position of the navbar 
+		
+		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function fixFunction() {
+		if (window.scrollY >= offset ) {
+			navbar.classList.add("sticky");
+			placeholder.style.height = `${navbar.offsetHeight}px`; // Set placeholder height
+		} else {
+			navbar.classList.remove("sticky");
+			placeholder.style.height = '0'; // Reset placeholder height
+		}
+		} 
+
+		// Use debounce to prevent the function from being called too frequently
+		const debouncedFixFunction = debounce(fixFunction, 2);
+
+		// Use requestAnimationFrame for smoother animations during scrolling.
+		function scrollHandler() {
+		    requestAnimationFrame(() => {
+		        debouncedFixFunction();
+		    });
+		}
+
+		// Event listener for the scroll event
+		window.onscroll = function() {scrollHandler()};
+
+		
+
+		// Mobile Navbar Submenu Dropdown
+		document.addEventListener('DOMContentLoaded', function () {
+            const portfolioItem = document.getElementById('portfolioItem');
+            const submenu = document.querySelector('.mobile-navbar-submenu');
+
+            portfolioItem.addEventListener('click', function () {
+                // Toggle the 'open' class for the submenu
+                submenu.classList.toggle('open');
+            });
+        });
 
 })(jQuery);

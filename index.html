@@ -9,53 +9,116 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="avatar"><img src="images/MichaelPortrait.jpg" alt="Portrait picture of me, Michael" /></a>
-					<h1>Hey! I'm <strong>Michael</strong>,
-					<br/>a Junior Graphic Designer.
-					<br/>Welcome to my Portfolio!</h1>
+	<!-- Header -->
+		<header id="header">
+			<div class="desktop-navbar">
+				<div class="logo">
+					<a href="index.html"><img src="images/MB Logo.svg" alt="Michael Bennett Logo" title="Michael Bennett"></a>
 				</div>
-				<ul class="inner">
-					<li><a href="dailydrawings.html">Daily Drawings</a></li>
-					<li><a href="posters.html">Posters</a></li>
-					<li><a href="default.html">Test</a></li>
-				</ul>
-				<div id="headeranimateimage">
-					<img src="images/websiteheadershapesanimate.svg" alt="">
+				<nav>
+					<div id="navbar-wrapper">
+						<ul id="navbar" class="navbar-menu-items">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="#">PORTFOLIO</a>
+								<ul class="navbar-dropdown navbar-dropdown-animated">
+									<li><a href="posters.html">POSTERS</a></li>
+									<li><a href="dailydrawings.html">DAILY DRAWINGS</a></li>
+									<li><a href="college.html">COLLEGE</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">ABOUT ME</a></li>
+							<li><a href="contact.html">CONTACT</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div id="navbar-placeholder"></div> <!-- Placeholder element for when navbar sticks on scroll -->
+			</div>
+			<div class="mobile-navbar">
+				<div class="logo">
+					<a href="index.html"><img src="images/MB Logo.svg" alt="Michael Bennett Logo" title="Michael Bennett"></a>
 				</div>
-			</header>
-
-        <!-- Main -->
-          <div id="main">
-            <h1>Welcome to my website! :D</h1>
-            <p>Currently under construction <br/>
-                but have a look at my Daily Drawings.
-
-
-            </p>
-
-          </div>
-
-        <!-- Footer -->
-		 	<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://www.behance.net/michaelbennett98" class="icon brands fa-behance"><span class="label">Behance</span></a></li>
-						<li><a href="https://www.instagram.com/mikebennett98/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://www.linkedin.com/in/michaelbennett98/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
+				<div class="navbar-container nav-container">
+					<input class="checkbox" type="checkbox" name="hamburger-menu" id="hamburger-menu" />
+					<div class="hamburger-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+					<nav>
+						<div class="mobile-navbar-menu">
+							<ul class="mobile-navbar-menu-items">
+								<li><a href="index.html">HOME</a></li>
+								<li id="portfolioItem"><a href="#">PORTFOLIO <i class="fa-solid fa-chevron-down fa-2xs"></i></a>
+									<ul class="mobile-navbar-submenu">
+										<li><a href="posters.html">POSTERS</a></li>
+										<li><a href="dailydrawings.html">DAILY DRAWINGS</a></li>
+										<li><a href="college.html">COLLEGE</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">ABOUT ME</a></li>
+								<li><a href="contact.html">CONTACT</a></li>
+							</ul>
+						</div>
+					</nav>
 				</div>
-			</footer>
+			</div>
+		</header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Main -->
+     	<div id="main">
+		  	<div class="two">
+				<h2>Hey I'm Michael,</br> Welcome to my portfolio website!</br>I will be adding more soon but have a little look around. </h2>
+			</div>
 
+			<h3>Featured Work:</h3> 
+			<div class="row">
+				<div class="col-3">
+					<h4>Daily Drawings</h4>
+					<a href="dailydrawings.html"><img src="" alt=""></a>
+				</div>
+
+				<div class="col-3">
+					<h4>Fun Posters</h4>
+					<a href="posters.html"><img src="" alt=""></a>
+				</div>
+			</div>
+
+			<h3>Before you go:</h3> 
+			<div class="row">
+				<div class="col-3">
+					<h4>Logofolio 2023</h4>
+					<iframe src="https://www.behance.net/embed/project/184617639?ilo0=1" 
+						height="316" 
+						width="404" 
+						allowfullscreen lazyload frameborder="0" allow="clipboard-write" 
+						refererPolicy="strict-origin-when-cross-origin">
+					</iframe>
+				</div>
+				<div class="col-3" style="border-radius: 10px;">
+					<h4>Magic Morphing Vases</h4>
+					<a href="https://www.instagram.com/mikebennett98/p/CddmaTxMmXV/"><img src="images/index/ig-magicvases-thumbnail.png" style="width: 70%; height: auto;" alt=""></a>
+				</div>
+			</div>
+		</div>
+
+    <!-- Footer -->
+	 	<footer id="footerEnd">
+			<ul class="icons">
+				<li><a href="https://www.behance.net/michaelbennett98" class="icon brands fa-behance"><span class="label">Behance</span></a></li>
+				<li><a href="https://www.instagram.com/mikebennett98/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://www.linkedin.com/in/michaelbennett98/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>© 2024 Michael Bennett</li>
+			</ul>
+		</footer>
+		
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>

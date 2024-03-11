@@ -9,83 +9,177 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="avatar"><img src="images/MichaelPortrait.jpg" alt="Portrait picture of me, Michael" /></a>
-					<h1>Hey! I'm <strong>Michael</strong>,
-					<br/>a Junior Graphic Designer.
-					<br/>Welcome to my Portfolio!</h1>
+	<!-- Header -->
+		<header id="header">
+			<div class="desktop-navbar">
+				<div class="logo">
+					<a href="index.html"><img src="images/MB Logo.svg" alt="Michael Bennett Logo" title="Michael Bennett"></a>
 				</div>
-				<ul class="inner">
-					<li><a href="dailydrawings.html">Daily Drawings</a></li>
-					<li><a href="posters.html">Posters</a></li>
-					<li><a href="default.html">Test</a></li>
-				</ul>
-				<div id="headeranimateimage">
-					<img src="images/websiteheadershapesanimate.svg" alt="">
+				<nav>
+					<div id="navbar-wrapper">
+						<ul id="navbar" class="navbar-menu-items">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="#">PORTFOLIO</a>
+								<ul class="navbar-dropdown navbar-dropdown-animated">
+									<li><a href="posters.html">POSTERS</a></li>
+									<li><a href="dailydrawings.html">DAILY DRAWINGS</a></li>
+									<li><a href="college.html">COLLEGE</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">ABOUT ME</a></li>
+							<li><a href="contact.html">CONTACT</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div id="navbar-placeholder"></div> <!-- Placeholder element for when navbar sticks on scroll -->
+			</div>
+			<div class="mobile-navbar">
+				<div class="logo">
+					<a href="index.html"><img src="images/MB Logo.svg" alt="Michael Bennett Logo" title="Michael Bennett"></a>
 				</div>
-			</header>
+				<div class="navbar-container nav-container">
+					<input class="checkbox" type="checkbox" name="hamburger-menu" id="hamburger-menu" />
+					<div class="hamburger-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+					<nav>
+						<div class="mobile-navbar-menu">
+							<ul class="mobile-navbar-menu-items">
+								<li><a href="index.html">HOME</a></li>
+								<li id="portfolioItem"><a href="#">PORTFOLIO <i class="fa-solid fa-chevron-down fa-2xs"></i></a>
+									<ul class="mobile-navbar-submenu">
+										<li><a href="posters.html">POSTERS</a></li>
+										<li><a href="dailydrawings.html">DAILY DRAWINGS</a></li>
+										<li><a href="college.html">COLLEGE</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">ABOUT ME</a></li>
+								<li><a href="contact.html">CONTACT</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
 
         <!-- Main -->
           <div id="main">
-			<section class="imagepop">
-				<h2>Posters</h2>
-				<div id="one"><p>
-					I like to combine images from Unsplash and Pexels to create interesting poster compositions for fun.<br/>
-					Playing around with combinations of different blend modes on multiple images, adding shapes, text, and effects, and experimenting with layout until I'm happy with the design.
-					</p>
+			<div class="imagepop">
+				<div id="hero-posters" class="hero">
+					<div class="hero-text"><h1>Posters</h1></div>
 				</div>
-				<div class="row ">
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster1-Pendulum.jpg" class="image fit thumb width-full"><img src="images/posters/poster1-Pendulum.jpg" alt="Let The Pendulum Swing Poster"/><title>Pendulum</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster2-Stolen_Dance.jpg" class="image fit thumb width-full"><img src="images/posters/poster2-Stolen_Dance.jpg" alt="Stolen Dance Milky Dance Poster" /><title>Stolen Dance</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster3-April_Blues.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster3-April_Blues.jpg" class="lazy" alt="April Blues Alphabet Poster" /><title>April Blues (Alphabet)</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster4-Livin_La_Vida_Loca.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster4-Livin_La_Vida_Loca.jpg" class="lazy" alt="Livin La Vida Loca Poster" /><title>Livin La Vida Loca</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster5-Run_Through_The_Jungle.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster5-Run_Through_The_Jungle.jpg" class="lazy" alt="Better Run Through The Jungle Poster" /><title>Run Through The Jungle</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster6-Ooh_La_La.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster6-Ooh_La_La.jpg" class="lazy" alt="Ooh La la Strawberry Lips Poster" /><title>Ooh La la</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster7-Runaway.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster7-Runaway.jpg" class="lazy" alt="Abstract Runaway Texture Poster" /><title>Abstract Runaway</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster8-Just_Give_Me_A_Minute.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster8-Just_Give_Me_A_Minute.jpg" class="lazy" alt="Just Give Me A Minute While I Float Poster" /><title>Just Give Me A Minute</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster9-Sweet_Escape.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster9-Sweet_Escape.jpg" class="lazy" alt="Y2K Inspired Sweet Escape Poster" /><title>The Sweet Escape</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster10-We_The_Masses.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster10-We_The_Masses.jpg" class="lazy" alt="We The Masses Poster" /><title>Dreamlike</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/poster11-yolo.jpg" class="image fit thumb width-full"><img data-src="images/posters/poster11-yolo.jpg" class="lazy" alt="Eye Test Poster" /><title>You Only Live Once</title></a>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/posters/Poster12-Curious_Type.jpg" class="image fit thumb width-full"><img data-src="images/posters/Poster12-Curious_Type.jpg" class="lazy" alt="'Curious' Type Poster" /><title>Curiosity</title></a>
-					</article>
+				
+				<div class="one row">
+					<div class=" col-6 col-8-large col-6-medium col-8-small col-10-xsmall">
+						<p>
+						I like to combine images from Unsplash and Pexels to create interesting poster compositions for fun.<br/>
+						Playing around with combinations of different blend modes on multiple images, adding shapes, text, and effects, and experimenting with layout until I'm happy with the design.
+						</p>
+					</div>
+				</div>
+
+				<div class="one hundred-small hundred-xsmall" >
+					<div class="poster-wrapper">
+						<div class="poster-row">
+							<img class="poster-w-mockup" src="images/posters/poster1-Pendulum.jpg" alt="Let The Pendulum Swing Poster"/><title>Pendulum</title>
+							<img class="poster-mockup" src="images/posters/poster1-Pendulum-mockup.jpg" alt="Let The Pendulum Swing Poster Mockup"/><title>Pendulum Poster Mockup</title>
+						</div>
+					  
+						<div class="poster-row">
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster2-Stolen_Dance.jpg" alt="Stolen Dance Milky Dance Poster" /><title>Stolen Dance</title>
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster3-April_Blues.jpg" alt="April Blues Alphabet Poster" /><title>April Blues (Alphabet)</title>
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster5-Run_Through_The_Jungle.jpg" alt="Better Run Through The Jungle Poster" /><title>Run Through The Jungle</title>
+						 </div>
+					  
+						<div class="poster-row">
+							<img class="lazy poster-mockup" data-src="images/posters/poster4-Livin_La_Vida_Loca-mockup.jpg" alt="Livin La Vida Loca Poster Mockup" /><title>Livin La Vida Loca Poster Mockup</title>
+							<img class="lazy poster-w-mockup imp-medium" data-src="images/posters/poster4-Livin_La_Vida_Loca.jpg" alt="Livin La Vida Loca Poster" /><title>Livin La Vida Loca</title>
+						</div>
+
+						<div class="poster-row">
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster10-We_The_Masses.jpg" alt="We The Masses Poster" /><title>Dreamlike</title>
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster6-Ooh_La_La.jpg" alt="Ooh La la Strawberry Lips Poster" /><title>Ooh La la</title>
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster7-Runaway.jpg" alt="Abstract Runaway Texture Poster" /><title>Abstract Runaway</title>
+						</div>
+						
+						<div class="poster-row">
+							<img class="lazy poster-w-mockup" data-src="images/posters/Poster12-Curious_Type.jpg" alt="'Curious' Type Poster Mockup" /><title>Curiosity Poster Mockup</title>
+							<img class="lazy poster-mockup" data-src="images/posters/poster12-Curious_Type-mockup.jpg" alt="'Curious' Type Poster" /><title>Curiosity</title>
+						</div>
+
+						<div class="poster-row">
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster8-Just_Give_Me_A_Minute.jpg" alt="Just Give Me A Minute While I Float Poster" /><title>Just Give Me A Minute</title>
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster9-Sweet_Escape.jpg" alt="Y2K Inspired Sweet Escape Poster" /><title>The Sweet Escape</title>
+							<img class="lazy poster-of-3-posters" data-src="images/posters/poster11-yolo.jpg" alt="Eye Test Poster" /><title>You Only Live Once</title>
+					</div>
+
+					<!-- Alternative Layout 
+					<div class="poster-wrapper">
+						<div class="poster-row">
+							<img class="poster-w-mockup" src="images/posters/poster1-Pendulum.jpg" alt="Let The Pendulum Swing Poster"/><title>Pendulum</title>
+							<img class="poster-mockup" src="images/posters/poster1-Pendulum-mockup.jpg" alt="Let The Pendulum Swing Poster Mockup"/><title>Pendulum Poster Mockup</title>
+						</div>
+					  
+						<div class="poster-row">
+							<div style="width: 1000px;" class="poster-spacer"></div>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster2-Stolen_Dance.jpg" alt="Stolen Dance Milky Dance Poster" /><title>Stolen Dance</title>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster3-April_Blues.jpg" alt="April Blues Alphabet Poster" /><title>April Blues (Alphabet)</title>
+							<div style="width: 1000px;" class="poster-spacer"></div>
+						 </div>
+
+						 <div class="poster-row">
+							<img class="lazy poster-mockup" data-src="images/posters/poster12-Curious_Type-mockup.jpg" alt="'Curious' Type Poster" /><title>Curiosity</title>
+							<img class="lazy poster-w-mockup" data-src="images/posters/Poster12-Curious_Type.jpg" alt="'Curious' Type Poster Mockup" /><title>Curiosity Poster Mockup</title>
+						</div>
+
+						<div class="poster-row">
+							<div style="width: 1000px;" class="poster-spacer"></div>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster10-We_The_Masses.jpg" alt="We The Masses Poster" /><title>Dreamlike</title>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster6-Ooh_La_La.jpg" alt="Ooh La la Strawberry Lips Poster" /><title>Ooh La la</title>
+							<div style="width: 1000px;" class="poster-spacer"></div>
+						 </div>
+
+						 <div class="poster-row">
+							<img class="lazy poster-mockup" data-src="images/posters/poster4-Livin_La_Vida_Loca-mockup.jpg" alt="Livin La Vida Loca Poster Mockup" /><title>Livin La Vida Loca Poster Mockup</title>
+							<img class="lazy poster-w-mockup" data-src="images/posters/poster4-Livin_La_Vida_Loca.jpg" alt="Livin La Vida Loca Poster" /><title>Livin La Vida Loca</title>
+						</div>
+
+						<div class="poster-row">
+							<div style="width: 1000px;" class="poster-spacer"></div>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster7-Runaway.jpg" alt="Abstract Runaway Texture Poster" /><title>Abstract Runaway</title>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster5-Run_Through_The_Jungle.jpg" alt="Better Run Through The Jungle Poster" /><title>Run Through The Jungle</title>
+							<div style="width: 1000px;" class="poster-spacer"></div>
+						 </div>
+						 
+						 <div class="poster-row">
+							<img class="lazy poster-w-mockup" data-src="images/posters/poster11-yolo.jpg" alt="Eye Test Poster" /><title>You Only Live Once</title>
+							<img class="lazy poster-mockup" data-src="images/posters/poster11-yolo-mockup.jpg" alt="Eye Test Poster" /><title>You Only Live Once Poster poster-mockup</title>
+						</div>
+
+						<div class="poster-row">
+							<div style="width: 1000px;" class="poster-spacer"></div>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster9-Sweet_Escape.jpg" alt="Y2K Inspired Sweet Escape Poster" /><title>The Sweet Escape</title>
+							<img class="lazy poster-of-2-posters" data-src="images/posters/poster8-Just_Give_Me_A_Minute.jpg" alt="Just Give Me A Minute While I Float Poster" /><title>Just Give Me A Minute</title>
+							<div style="width: 1000px;" class="poster-spacer"></div>
+						 </div>
+
+					</div> -->
 				</div>
           </div>
 
-        <!-- Footer -->
-		 	<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://www.behance.net/michaelbennett98" class="icon brands fa-behance"><span class="label">Behance</span></a></li>
-						<li><a href="https://www.instagram.com/mikebennett98/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://www.linkedin.com/in/michaelbennett98/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-				</div>
-			</footer>
+    <!-- Footer -->
+		<footer id="footerEnd">
+			<ul class="icons">
+				<li><a href="https://www.behance.net/michaelbennett98" class="icon brands fa-behance"><span class="label">Behance</span></a></li>
+				<li><a href="https://www.instagram.com/mikebennett98/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://www.linkedin.com/in/michaelbennett98/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>© 2024 Michael Bennett</li>
+			</ul>
+		</footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
